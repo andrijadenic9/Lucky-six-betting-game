@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Lucky six</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+	<link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+	<div class="container-fluid bet-table" style="padding: 0">
+		<div class="row" style="margin: 0">
+			<div class="choose-table">
+				<div class="row" style="margin: 0; justify-content: center" data-id="column-1"></div>
+				<div class="row" style="margin: 0; justify-content: center" data-id="column-2"></div>
+				<div class="row" style="margin: 0; justify-content: center" data-id="column-3"></div>
+				<div class="row" style="margin: 0; justify-content: center" data-id="column-4"></div>
+				<div class="row" style="margin: 0; justify-content: center" data-id="column-5"></div>
+				<div class="row" style="margin: 0; justify-content: center" data-id="column-6"></div>
+				<div class="row" style="margin: 0; justify-content: center" data-id="column-7"></div>
+				<div class="row" style="margin: 0; justify-content: center" data-id="column-8"></div>
+			</div>
+			<div class="side-table">
+				<div class="row">
+					<div class="picked-balls"></div>
+				</div>
+				<div class="row">
+					<div class="bet">
+						<input type="number" data-id="bet" placeholder="Bet please..."
+							style="padding: 10px; border-radius: 4px" />
+						<input type="submit" data-id="submit" placeholder="Uplati"
+							style="padding: 10px; border-radius: 4px" />
+					</div>
+				</div>
+				<div class="row">
+					<div class="random-balls">
+						<button data-id="random-balls">Random loptice</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid pullout-table">
+		<div class="row" style="justify-content: center; margin-bottom: 20px">
+			<div style="display: flex; justify-content: center">
+				<div class="empty-ball"></div>
+				<div class="empty-ball"></div>
+				<div class="empty-ball"></div>
+				<div class="empty-ball"></div>
+				<div class="empty-ball"></div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-2" style="display: grid; justify-content: center">
+				<div class="empty-ball">100000</div>
+				<div class="empty-ball">10000</div>
+				<div class="empty-ball">5000</div>
+				<div class="empty-ball">2500</div>
+				<div class="empty-ball">1000</div>
+			</div>
+			<div class="col-2" style="display: grid; justify-content: center">
+				<div class="empty-ball">500</div>
+				<div class="empty-ball">300</div>
+				<div class="empty-ball">200</div>
+				<div class="empty-ball">150</div>
+				<div class="empty-ball">100</div>
+			</div>
+			<div class="col-2" style="display: grid; justify-content: center">
+				<div class="empty-ball">80</div>
+				<div class="empty-ball">60</div>
+				<div class="empty-ball">40</div>
+				<div class="empty-ball">30</div>
+				<div class="empty-ball">20</div>
+			</div>
+			<div class="col-2" style="display: grid; justify-content: center">
+				<div class="empty-ball">15</div>
+				<div class="empty-ball">14</div>
+				<div class="empty-ball">13</div>
+				<div class="empty-ball">12</div>
+				<div class="empty-ball">11</div>
+			</div>
+			<div class="col-2" style="display: grid; justify-content: center">
+				<div class="empty-ball">10</div>
+				<div class="empty-ball">9</div>
+				<div class="empty-ball">8</div>
+				<div class="empty-ball">7</div>
+				<div class="empty-ball">6</div>
+			</div>
+			<div class="col-2" style="display: grid; justify-content: center">
+				<div class="empty-ball">5</div>
+				<div class="empty-ball">4</div>
+				<div class="empty-ball">3</div>
+				<div class="empty-ball">2</div>
+				<div class="empty-ball">1</div>
+			</div>
+		</div>
+		<div class="row" style="display: flex; align-items: center;">
+			<div class="col-6">
+				<div class="picked-balls2"></div>
+				<h4 style="color: white; text-align: center; margin-top: 20px; margin-bottom: 40px">Vase izabrane
+					loptice</h4>
+			</div>
+			<div class="col-6">
+				<div class="answer"></div>
+			</div>
+		</div>
+	</div>
+	<script src="main.js"></script>
+	<script src="random.js"></script>
+	<script src="allColors.js"></script>
+	<script src="reusableFunctions.js"></script>
+</body>
+
+</html>
