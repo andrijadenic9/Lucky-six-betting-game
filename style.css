@@ -111,7 +111,7 @@
 }
 .brownFull,
 .brown:hover {
-	background: brown;
+	background: rgba(165, 42, 42, 0.5);
 	border: 3px solid brown;
 }
 .allYellow {
