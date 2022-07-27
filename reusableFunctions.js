@@ -13,7 +13,6 @@ function resetBallSelection() {
             ball[i].classList.remove('silverFull');
         }
     }
-
     resetAllColorSelection()
     allPickedBalls.length = 0;
     allPickedBallsObjects.length = 0;
@@ -111,4 +110,14 @@ function doNotLetMeStart() {
     submit.style.background = "#F0F0F0";
     submit.style.color = "#000";
     submit.removeEventListener("click", startBowl);
+}
+
+
+// * DISPLAY BALLS ON PICKED FRONT AREAS
+function displayBallOnFront(self, childDivDOM, parentDivDOM, background, myBorder) {
+    childDivDOM.style.background = background;
+    childDivDOM.style.border = myBorder;
+    childDivDOM.innerHTML = self.innerHTML;
+    childDivDOM.className = "ball " + "ball-look";
+    parentDivDOM.appendChild(childDivDOM);
 }
