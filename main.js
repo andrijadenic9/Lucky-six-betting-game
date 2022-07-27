@@ -49,7 +49,7 @@ let allWinnerBalls = [];
 let allBalls = [...redBalls, ...greenBalls, ...blueBalls, ...purpleBalls, ...brownBalls, ...yellowBalls, ...orangeBalls, ...silverBalls];
 let pickBallsMin = 2; // ! MINIMUM DOZVOLJENIH LOPTICA ZA KLADJENJE
 let pickBallsMax = 10; // ! MAXIMUM DOZVOLJENIH LOPTICA ZA KLADJENJE
-let ballDrawingTime = 20; // ! BROJ SEKUNDI ZA KOJE CE DA SE IZVUCE SVAKA OD LOPTICA (IZRAZENO U MILISEKUNDAMA)
+let ballDrawingTime = 800; // ! BROJ SEKUNDI ZA KOJE CE DA SE IZVUCE SVAKA OD LOPTICA (IZRAZENO U MILISEKUNDAMA)
 
 // * daj event svim lopticama
 addEventOnAllBalls();
