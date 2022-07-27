@@ -114,8 +114,5 @@ function getRandomBalls() {
         pickedBallsArea.appendChild(randomBallToPickedArea);
         pickedBallsArea2.appendChild(randomBallToPickedArea2);
     }
-
     letMeStart();
-
-    console.log(allPickedBalls, 'from random');
 }

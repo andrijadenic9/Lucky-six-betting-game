@@ -65,25 +65,3 @@ function addEventForColorSelected() {
     allOrange.addEventListener("click", allOrangeSelected);
     allSilver.addEventListener("click", allSilverSelected);
 }
-
-// // * THE ARRAY FROM WHICH WE TAKE THE COLORS OF THE BALLS
-// let removeEventsArray = [
-//     [allRed, allRedSelected, 'red'],
-//     [allGreen, allGreenSelected, 'green'],
-//     [allBlue, allBlueSelected, 'blue'],
-//     [allPurple, allPurpleSelected, 'purple'],
-//     [allBrown, allBrownSelected, 'brown'],
-//     [allYellow, allYellowSelected, 'yellow'],
-//     [allOrange, allOrangeSelected, 'orange'],
-//     [allSilver, allSilverSelected, 'silver']
-// ];
-
-// // * IF ARGUMENT (COLOR) IS NOT THE ONE WE SENT, REMOVE EVENTS FROM removeEventsArray ARRAY
-// function removeEventExceptFor(color) {
-//     for (let i = 0; i < removeEventsArray.length; i++) {
-//         if (removeEventsArray[i][2] != color) {
-//             removeEventsArray[i][0].removeEventListener("click", removeEventsArray[i][1]);
-//         }
-//     }
-// }
-

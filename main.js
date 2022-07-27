@@ -133,23 +133,18 @@ function chooseBalls() {
 		allPickedBalls.push(choosenBall);
 	}
 
-	// TODO ------------- poporaviti ovo
 	// * proverevam duzinu loptica kako bih podesio layout prikaza izabranih loptica
-	// checkFrontBallsLayout()
 	if (allPickedBalls.length > 6) {
-		// pickedBallsArea.style.width = '375px';
-		// pickedBallsArea2.style.width = '360px';
+		pickedBallsArea.style.width = '375px';
 		pickedBallsArea2.style.width = '356px';
 		pickedBallsArea.style.flexWrap = 'wrap';
 		pickedBallsArea2.style.flexWrap = 'wrap';
-		pickedBallsArea.style.marginBottom = '100px';
 		pullOutTable.style.height = 'auto';
 	} else {
 		pickedBallsArea.style.width = 'fit-content';
-		// pickedBallsArea2.style.width = 'fit-content';
+		pickedBallsArea2.style.width = 'fit-content';
 		pickedBallsArea.style.flexWrap = 'nowrap';
 		pickedBallsArea2.style.flexWrap = 'nowrap';
-		pickedBallsArea.style.marginBottom = '20px';
 		pullOutTable.style.height = '100vh';
 	}
 
@@ -176,9 +171,8 @@ function chooseBalls() {
 	}
 }
 
-// ? ///////////////////////////////////////////////////////////////////////////
-// ? ///////////// SVE PRAZNE LOPTICE KOJE CEKAJU DA SE IZVUKU /////////////////
-// ? ///////////////////////////////////////////////////////////////////////////
+
+// ? SVE PRAZNE LOPTICE KOJE CEKAJU DA SE IZVUKU
 let emptyBalls = document.querySelectorAll(".empty-ball");
 
 // * FUNKCIJA KOJA POKRECE IZVLACENJE, POKRECE SE NA SUBMIT DUGME
@@ -203,9 +197,7 @@ function startBowl() {
 	drawingLoop = setInterval(goodLuck, ballDrawingTime);
 }
 
-// ? //////////////////////////////////////////////////////////////////////
-// ? //////////// GOOD LUCK - IZVLACANJE 35 LOPTICA ///////////////////////
-// ? //////////////////////////////////////////////////////////////////////
+// ? GOOD LUCK - IZVLACANJE 35 LOPTICA
 function goodLuck() {
 
 	// * izvlacimo random lopticu i ubacujemo je u arej pobednickih loptica
@@ -274,17 +266,11 @@ function checkIfHaveWinner() {
 	let positionGain = [];
 	let maxKvota;
 
-	// console.log(bet.value);
-	// console.log(typeof bet.value);
-
 	if (bet.value) {
 		var betVal = parseInt(bet.value); // ? pretvaramo uplatu iz stringa u number
 	} else {
 		var betVal = 0;
 	}
-
-	console.log(betVal);
-	console.log(typeof betVal);
 
 	for (let i = 0; i < allPickedBalls.length; i++) {
 
@@ -376,21 +362,13 @@ function checkIfHaveWinner() {
 				if (ball[i].style.transform === "scale(1.2)" && ball[i].style.outline === "dashed") {
 
 					// ? proveravamo da li je uplacena suma i u odnosu na to izbacujemo poruku
-					if (betVal === 0) {
-						answer.innerHTML = "Vase loptice su izvucene, cak ste izvukli duplu srecu! Na zalost, niste uplatili opkladu. Sledeci put ne budi cicija :)";
-					} else {
-						answer.innerHTML = "Cestitamo sreca je na Vasoj strani, duplirali ste svoj dobitak. Osvojili ste " + bet * 2 + " dinara";
-					}
+					betVal === 0 ? answer.innerHTML = "Vase loptice su izvucene, cak ste izvukli duplu srecu! Na zalost, niste uplatili opkladu. Sledeci put ne budi cicija :)" : answer.innerHTML = "Cestitamo sreca je na Vasoj strani, duplirali ste svoj dobitak. Osvojili ste " + bet * 2 + " dinara";
 
 					// ? ako su nase loptice izvucene ali ni jedna nije izvucena na mestu "deteline" (dupltu sreca)
 				} else if (ball[i].style.transform === "scale(1.2)" && ball[i].style.outline !== "dashed") {
 
 					// ? proveravamo da li je uplacena suma i u odnosu na to izbacujemo poruku
-					if (betVal === 0) {
-						answer.innerHTML = "Vase loptice su izvucene! Na zalost, niste uplatili opkladu. Sledeci put ne budi cicija :)";
-					} else {
-						answer.innerHTML = "Cestitamo osvojili ste " + bet + " dinara";
-					}
+					betVal === 0 ? answer.innerHTML = "Vase loptice su izvucene! Na zalost, niste uplatili opkladu. Sledeci put ne budi cicija :)" : answer.innerHTML = "Cestitamo osvojili ste " + bet + " dinara";
 				}
 			}
 		} else {
@@ -401,13 +379,10 @@ function checkIfHaveWinner() {
 			answer.style.background = "#d9534f";
 		}
 	}
-
-	console.log(positionGain, 'izvucene loptice');
 }
 
 // * ADD EVENT ON ALL BALLS
 function addEventOnAllBalls() {
-	console.log('eeee');
 	for (let i = 0; i < ball.length; i++) {
 		ball[i].addEventListener("click", chooseBalls);
 	}
